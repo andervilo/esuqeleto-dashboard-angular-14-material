@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-const THEME = 'prontuarioTheme';
-
+const THEME = 'defaultTheme';
 @Component({
   selector: 'app-default',
-  templateUrl: './default.component.html',
-  styleUrls: ['./default.component.scss']
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class DefaultComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
   sideBarOpen = true;
 
@@ -23,7 +22,7 @@ export class DefaultComponent implements OnInit {
     this.sideBarOpen = !this.sideBarOpen;
   }
 
-  ngOnDestroy(): void {
+  ngonDestroy(): void {
     this.body.classList.remove(THEME);
   }
 }
